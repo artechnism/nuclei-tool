@@ -1,0 +1,6 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+nuclei_tool/bin/nuclei.exe
+nuclei_tool/bin/nuclei-templates/
