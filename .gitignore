@@ -5,3 +5,4 @@ __pycache__/
 nuclei_tool/bin/nuclei.exe
 nuclei_tool/bin/nuclei-templates/
 scans.db
+env-old
