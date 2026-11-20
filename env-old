@@ -1,0 +1,19 @@
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# ریشه پروژه = فولدری که main.py داخلشه
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+# مسیر پیش‌فرض: bin/nuclei.exe داخل خود پروژه
+DEFAULT_NUCLEI = PROJECT_ROOT / "bin" / "nuclei.exe"
+DEFAULT_TEMPLATES = PROJECT_ROOT / "bin" / "nuclei-templates"
+
+NUCLEI_PATH = os.getenv("NUCLEI_PATH", str(DEFAULT_NUCLEI))
+NUCLEI_TEMPLATES = os.getenv("NUCLEI_TEMPLATES", str(DEFAULT_TEMPLATES))
+
+# چک سریع که فایل واقعاً وجود داره
+if not Path(NUCLEI_PATH).is_file():
+    print(f"[!] Warning: nuclei not found at {NUCLEI_PATH}")

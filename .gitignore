@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 nuclei_tool/bin/nuclei.exe
 nuclei_tool/bin/nuclei-templates/
+scans.db
